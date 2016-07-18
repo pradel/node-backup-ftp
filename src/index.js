@@ -16,7 +16,7 @@ class BackupFtp extends EventEmitter {
 
   start() {
     // Emit success or error
-    this.start((err, data) => {
+    this.handleStart((err, data) => {
       if (err) {
         this.emit('error', err);
       } else {
