@@ -53,7 +53,7 @@ class BackupFtp extends EventEmitter {
       shelljs.exec(`tar -zcvf ${backupName} ${this.path}`);
     } else if (this.type === 'mongodb') {
       shelljs.exec('mongodump --quiet');
-      shelljs.exec(`tar -zcvf ${backupName} dump`);
+      shelljs.exec(`tar -zcf ${backupName} dump`);
     }
   }
 
