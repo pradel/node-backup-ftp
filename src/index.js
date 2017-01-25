@@ -11,6 +11,7 @@ class BackupFtp extends EventEmitter {
     this.type = config.type;
     this.name = config.name;
     this.path = config.path;
+    this.options = config.options;
     this.job = schedule.scheduleJob(this.cron, this.start.bind(this));
   }
 
@@ -52,7 +53,11 @@ class BackupFtp extends EventEmitter {
     if (this.type === 'folder') {
       shelljs.exec(`tar -zcvf ${backupName} ${this.path}`);
     } else if (this.type === 'mongodb') {
-      shelljs.exec('mongodump --quiet');
+      let cmd = 'mongodump --quiet';
+      if (this.options && this.options.args) {
+        cmd += ` ${this.options.args}`;
+      }
+      shelljs.exec(cmd);
       shelljs.exec(`tar -zcf ${backupName} dump`);
     }
   }

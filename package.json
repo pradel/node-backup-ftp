@@ -20,19 +20,19 @@
   },
   "homepage": "https://github.com/pradel/node-backup-ftp#readme",
   "devDependencies": {
-    "babel-cli": "^6.10.1",
-    "babel-preset-es2015": "^6.9.0",
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0",
     "chai": "^3.5.0",
-    "eslint": "^3.0.1",
-    "eslint-config-airbnb": "^9.0.1",
-    "eslint-plugin-import": "^1.10.2",
-    "eslint-plugin-jsx-a11y": "^1.5.5",
-    "eslint-plugin-react": "^5.2.2",
-    "mocha": "^2.5.3"
+    "eslint": "^3.14.0",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
+    "mocha": "^3.2.0"
   },
   "dependencies": {
-    "jsftp": "^1.5.3",
-    "node-schedule": "^1.1.1",
-    "shelljs": "^0.7.0"
+    "jsftp": "^1.5.5",
+    "node-schedule": "^1.2.0",
+    "shelljs": "^0.7.6"
   }
 }
